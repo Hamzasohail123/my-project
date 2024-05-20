@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
-// import Card from './Card';
+import Card from './Card';
 // import Login from './Login';
 
 function Courses() {
@@ -58,9 +58,9 @@ function Courses() {
 
       <p className='px-5 py-3 font-bold text-'>Current Courses</p>
       <div className='grid grid-cols-1 px-4 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
-        {/* <Card />
         <Card />
-        <Card /> */}
+        <Card />
+        <Card />
 
       </div>
     </div>

@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Login from './components/Login'; // Assuming you have a Login component
 import { Hero } from './components/Hero';
+import Courses from './components/Courses';
 
 export default function App() {
   return (
@@ -17,6 +18,8 @@ export default function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/hero" element={<Hero />} />
+            <Route path="/courses" element={<Courses />} />
+
           </Routes>
         </div>
       </div>
