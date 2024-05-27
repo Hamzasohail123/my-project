@@ -28,7 +28,7 @@ function Courses() {
         <p className='font-bold text-xl py-5 px-3'>What Would you like to learn</p>
       </div>
 
-      <div className='bg-gray-200 px-5 py-8 flex gap-4'>
+      <div className='bg-gray-200 px-5 py-8 flex md:flex-row flex-col w-full  gap-4'>
         <div>
           <Dropdown
             options={['Option 1', 'Option 2', 'Option 3']}

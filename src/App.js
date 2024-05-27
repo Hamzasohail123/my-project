@@ -11,10 +11,10 @@ import Courses from './components/Courses';
 export default function App() {
   return (
     <Router>
-      <div className="flex h-screen w-full">
-        <Sidebar />
+      <div className="flex w-full">
+        {/* <Sidebar /> */}
         <div className="w-full">
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/hero" element={<Hero />} />
