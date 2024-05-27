@@ -1,252 +1,362 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleSubmenu = (menu) => {
+    setActiveSubmenu(activeSubmenu === menu ? null : menu);
+  };
+
   return (
-    <div>
-        <div className="flex h-screen w-60 flex-col justify-between border-e bg-gray-200">
-  <div className="px-4 py-6">
-    <span className=" bg-gray-100">
-      <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" className='h-20 w-20' alt="logo" />
-    </span>
-  
-    <ul className="mt-3 space-y-1">
-        <p className='font-bold text-base px-4 py-2'>By Goal</p>
-      <li className='pt-3'>
-        <a
-          href="/"
-          className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-        >
-          General
-        </a>
-      </li>
+    <div className="relative">
+      <svg
+        fill="#000000"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="h-5 w-5 cursor-pointer"
+        viewBox="0 0 20 20"
+        enableBackground="new 0 0 20 20"
+        xmlSpace="preserve"
+        onClick={toggleSidebar}
+      >
+        <path d="M19,5H1C0.4,5,0,4.6,0,4s0.4-1,1-1h18c0.6,0,1,0.4,1,1S19.6,5,19,5z" />
+        <path d="M10,11H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h9c0.6,0,1,0.4,1,1S10.6,11,10,11z" />
+        <path d="M19,17H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S19.6,17,19,17z" />
+      </svg>
 
-      <li>
-        <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary
-            className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-          >
-            <span className="text-sm font-medium"> Teams </span>
-
-            <span className="shrink-0 transition duration-300 group-open:-rotate-180">
+      {isOpen && (
+        <div className="fixed top-10 right-5 xl:right-20 h-[38rem] w-64 border-2 rounded-lg bg-[#EBEBEB] text-black p-4 overflow-y-auto">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold">By Goal</h2>
+            
+            
+            <div
+              className=""
+              onClick={toggleSidebar}
+            >
               <svg
+                className='w-5 h-5'
+                viewBox="0 0 24 24"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
               >
                 <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
+                  d="M17 7L7 17M7 7L17 17"
+                  stroke="#000000"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
-            </span>
-          </summary>
-
-          <ul className="mt-2 space-y-1 px-4">
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Banned Users
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Calendar
-              </a>
-            </li>
-          </ul>
-        </details>
-      </li>
-
-
-
-      <li>
-        <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary
-            className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-          >
-            <span className="text-sm font-medium"> Account </span>
-
-            <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </summary>
-
-          <ul className="mt-2 space-y-1 px-4">
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Details
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Security
-              </a>
-            </li>
-
-            <li>
-              <form action="#">
-                <button
-                  type="submit"
-                  className="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700"
-                >
-                  Logout
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li className="mb-2"><a href="/">Home</a></li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('about')} className="flex items-center justify-between w-full text-left">
+                  About
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'about' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
                 </button>
-              </form>
-            </li>
-          </ul>
-        </details>
-      </li>
-    </ul>
-
-    <ul className="mt-6 space-y-1">
-        <p className='font-bold text-base px-4 py-2'>By Topic</p>
-      <li className='pt-3'>
-        <a
-          href="/"
-          className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-        >
-          General
-        </a>
-      </li>
-
-      <li>
-        <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary
-            className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-          >
-            <span className="text-sm font-medium"> Teams </span>
-
-            <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </summary>
-
-          <ul className="mt-2 space-y-1 px-4">
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Banned Users
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Calendar
-              </a>
-            </li>
-          </ul>
-        </details>
-      </li>
-
-
-
-      <li>
-        <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary
-            className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-          >
-            <span className="text-sm font-medium"> Account </span>
-
-            <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </summary>
-
-          <ul className="mt-2 space-y-1 px-4">
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Details
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/"
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                Security
-              </a>
-            </li>
-
-            <li>
-              <form action="#">
-                <button
-                  type="submit"
-                  className="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700"
-                >
-                  Logout
+                {activeSubmenu === 'about' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Our History</a></li>
+                    <li className="mb-2"><a href="/">Our Team</a></li>
+                    <li className="mb-2"><a href="/">Careers</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('services')} className="flex items-center justify-between w-full text-left">
+                  Services
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'services' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
                 </button>
-              </form>
-            </li>
-          </ul>
-        </details>
-      </li>
-    </ul>
-
-  </div>
-
-  <div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
-   
-  </div>
-</div>
+                {activeSubmenu === 'services' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Web Development</a></li>
+                    <li className="mb-2"><a href="/">App Development</a></li>
+                    <li className="mb-2"><a href="/">SEO Services</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('products')} className="flex items-center justify-between w-full text-left">
+                  Products
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'products' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'products' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Product 1</a></li>
+                    <li className="mb-2"><a href="/">Product 2</a></li>
+                    <li className="mb-2"><a href="/">Product 3</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2"><a href="/">Contact</a></li>
+            </ul>
+            <h2 className="text-lg font-bold mb-4 mt-4">By Topic</h2>
+            <ul>
+              <li className="mb-2"><a href="/">Home</a></li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('about')} className="flex items-center justify-between w-full text-left">
+                  About
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'about' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'about' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Our History</a></li>
+                    <li className="mb-2"><a href="/">Our Team</a></li>
+                    <li className="mb-2"><a href="/">Careers</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('services')} className="flex items-center justify-between w-full text-left">
+                  Services
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'services' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'services' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Web Development</a></li>
+                    <li className="mb-2"><a href="/">App Development</a></li>
+                    <li className="mb-2"><a href="/">SEO Services</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('products')} className="flex items-center justify-between w-full text-left">
+                  Products
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'products' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'products' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Product 1</a></li>
+                    <li className="mb-2"><a href="/">Product 2</a></li>
+                    <li className="mb-2"><a href="/">Product 3</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2"><a href="/">Contact</a></li>
+            </ul>
+            <h2 className="text-lg font-bold mb-4 mt-4">Still Unsure</h2>
+            <ul>
+              <li className="mb-2"><a href="/">Home</a></li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('about')} className="flex items-center justify-between w-full text-left">
+                  About
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'about' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'about' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Our History</a></li>
+                    <li className="mb-2"><a href="/">Our Team</a></li>
+                    <li className="mb-2"><a href="/">Careers</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('services')} className="flex items-center justify-between w-full text-left">
+                  Services
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'services' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'services' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Web Development</a></li>
+                    <li className="mb-2"><a href="/">App Development</a></li>
+                    <li className="mb-2"><a href="/">SEO Services</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('products')} className="flex items-center justify-between w-full text-left">
+                  Products
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'products' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'products' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Product 1</a></li>
+                    <li className="mb-2"><a href="/">Product 2</a></li>
+                    <li className="mb-2"><a href="/">Product 3</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2"><a href="/">Contact</a></li>
+            </ul>
+            <h2 className="text-lg font-bold mb-4 mt-4">By Course</h2>
+            <ul>
+              <li className="mb-2"><a href="/">Home</a></li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('about')} className="flex items-center justify-between w-full text-left">
+                  About
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'about' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'about' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Our History</a></li>
+                    <li className="mb-2"><a href="/">Our Team</a></li>
+                    <li className="mb-2"><a href="/">Careers</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('services')} className="flex items-center justify-between w-full text-left">
+                  Services
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'services' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'services' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Web Development</a></li>
+                    <li className="mb-2"><a href="/">App Development</a></li>
+                    <li className="mb-2"><a href="/">SEO Services</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2 relative">
+                <button onClick={() => toggleSubmenu('products')} className="flex items-center justify-between w-full text-left">
+                  Products
+                  <svg
+                    className={`w-4 h-4 transform ${activeSubmenu === 'products' ? 'rotate-90' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                {activeSubmenu === 'products' && (
+                  <ul className="ml-4 mt-2">
+                    <li className="mb-2"><a href="/">Product 1</a></li>
+                    <li className="mb-2"><a href="/">Product 2</a></li>
+                    <li className="mb-2"><a href="/">Product 3</a></li>
+                  </ul>
+                )}
+              </li>
+              <li className="mb-2"><a href="/">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default Sidebar

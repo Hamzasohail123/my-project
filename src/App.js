@@ -12,9 +12,9 @@ export default function App() {
   return (
     <Router>
       <div className="flex h-screen w-full">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className="w-full">
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/hero" element={<Hero />} />

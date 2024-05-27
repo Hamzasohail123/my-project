@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import Card from './Card';
 // import Login from './Login';
+import Header from './Header';
 
 function Courses() {
   // State to hold the selected option for each dropdown
@@ -24,6 +25,7 @@ function Courses() {
 
   return (
     <div>
+       <Header />
       <div>
         <p className='font-bold text-xl py-5 px-3'>What Would you like to learn</p>
       </div>
