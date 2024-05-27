@@ -11,14 +11,16 @@ import Courses from './components/Courses';
 export default function App() {
   return (
     <Router>
-      <div className="flex h-screen w-full">
+
+      <div className="flex w-full">
+
         {/* <Sidebar /> */}
         <div className="w-full">
           {/* <Header /> */}
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/hero" element={<Hero />} />
-            <Route path="/courses" element={<Courses />} />
+            <Route path="/" element={<Hero />} />
+            {/* <Route path="/courses" element={<Courses />} /> */}
 
           </Routes>
         </div>

@@ -9,7 +9,7 @@ const Dropdown = ({ options, onSelect }) => {
   };
 
   return (
-    <select value={selectedOption} onChange={(e) => handleSelect(e.target.value)} className='px-4 py-3 rounded-md'>
+    <select value={selectedOption} onChange={(e) => handleSelect(e.target.value)} className='px-4 py-3 w-full rounded-md'>
       <option value="">Select an option</option>
       {options.map((option, index) => (
         <option key={index} value={option}>{option}</option>

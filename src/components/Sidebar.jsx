@@ -13,7 +13,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <svg
         fill="#000000"
         id="Layer_1"

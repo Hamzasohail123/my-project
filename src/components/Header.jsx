@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 
 function Navbar() {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -12,6 +12,9 @@ function Navbar() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 639) {
+        setIsOpen(false);
+      }
+      if (window.innerWidth > 639) {
         setIsOpen(true);
       }
     };
