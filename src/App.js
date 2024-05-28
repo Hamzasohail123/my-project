@@ -6,7 +6,8 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Login from './components/Login'; // Assuming you have a Login component
 import { Hero } from './components/Hero';
-import Courses from './components/Courses';
+// import Courses from './components/Courses';
+import Form from './components/Form';
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Hero />} />
+            <Route path="/form" element={<Form />} />
+
             {/* <Route path="/courses" element={<Courses />} /> */}
 
           </Routes>
