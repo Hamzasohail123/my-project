@@ -8,6 +8,7 @@ import Login from './components/Login'; // Assuming you have a Login component
 import { Hero } from './components/Hero';
 // import Courses from './components/Courses';
 import Form from './components/Form';
+import Navbar from './components/Navbar';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             {/* <Route path="/courses" element={<Courses />} /> */}
 
           </Routes>
+          <Navbar />
         </div>
       </div>
     </Router>
