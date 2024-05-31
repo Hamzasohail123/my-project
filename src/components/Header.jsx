@@ -66,7 +66,7 @@ function Navbar() {
               </div>
             </div>
             {/* Categories */}
-            <div className="hidden min-[1111px]:block ml-5 border-0 border-red-500">
+            <div className="hidden xl:flex min-[1111px]:block ml-5 border-0 border-red-500">
               <div className="flex space-x-4">
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
                 {/* <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Category 2</a> */}
@@ -95,7 +95,7 @@ function Navbar() {
             }
             
             {/* Categories */}
-            <div className="hidden min-[983px]:block ml-4 border-0 border-red-500">
+            <div className="hidden lg:flex min-[983px]:block ml-4 border-0 border-red-500">
               <div className="flex space-x-4">
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Udemy Business</a>
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Instructor</a>
@@ -183,16 +183,16 @@ function Navbar() {
           <div className="sm:flex flex-wrap justify-center gap-x-5 gap-y-3 items-center border-0 border-red-500">
 
             <div className="">
-              <a href="/" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Development</a>
+              <a href="/" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Home</a>
             </div>
             <div className="">
-              <a href="/" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Business</a>
+              <a href="/becomeATutor" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Become A Tutor</a>
             </div>
             <div className="">
-              <a href="/" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Finance & Accounting</a>
+              <a href="/thirdpage" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">3rd page</a>
             </div>
             <div className="">
-              <a href="/" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">IT & Doftware</a>
+              <a href="/contact" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Contact US</a>
             </div>
             <div className="">
               <a href="/" className="text-gray-500  px-3 py-2 rounded-md text-sm font-medium">Office Productivity</a>

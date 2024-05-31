@@ -1,13 +1,19 @@
 import React from "react";
 import TextEditor from "./TextEditor";
+import Header from "./Header";
 
 function Form() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-  };
+
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // Handle form submission logic here
+  // };
 
   return (
+    <>
+    <Header />
+    
     <div className="bg-white border rounded-lg shadow relative m-10">
       <div className="flex items-start justify-between p-5 border-b rounded-t">
         <div className="flex sm:flex-row flex-col gap-5 ">
@@ -42,7 +48,12 @@ function Form() {
       </div>
 
       <div className="p-6 space-y-6">
-        <form onSubmit={handleSubmit}>
+        {/* <form 
+          onChange={(event) => {
+            console.log("Form changed:", event.currentTarget);
+            submit(event.currentTarget);
+          }}
+          > */}
           <div className="grid grid-cols-6 gap-6">
             <div className="col-span-6 sm:col-span-3 ">
               <label
@@ -57,7 +68,7 @@ function Form() {
                 id="product-name"
                 className="shadow-sm p-4 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full"
                 placeholder="Apple Imac 27”"
-                required
+                
               />
             </div>
 
@@ -74,7 +85,7 @@ function Form() {
                 id="category"
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-4"
                 placeholder="Electronics"
-                required
+                
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
@@ -90,7 +101,7 @@ function Form() {
                 id="brand"
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-4"
                 placeholder="Apple"
-                required
+                
               />
             </div>
 
@@ -226,18 +237,19 @@ function Form() {
               ></textarea>
             </div> */}
           </div>
-        </form>
+        {/* </form> */}
       </div>
 
       <div className="p-6 border-t border-gray-200 rounded-b">
         <button
           className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          type="submit"
+          // type="submit"
         >
           Save all
         </button>
       </div>
     </div>
+    </>
   );
 }
 

@@ -5,10 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Login from './components/Login'; // Assuming you have a Login component
-import { Hero } from './components/Hero';
+import { Hero } from './pages/Hero';
 // import Courses from './components/Courses';
 import Form from './components/Form';
-
+import {BecomeATutor} from './pages/BecomeATutor';
+import { Thirdpage } from './pages/Thirdpage';
 export default function App() {
   return (
     <Router>
@@ -21,7 +22,9 @@ export default function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Hero />} />
-            <Route path="/form" element={<Form />} />
+            <Route path="/contact" element={<Form />} />
+            <Route path="/becomeATutor" element={<BecomeATutor />} />
+            <Route path="/thirdpage" element={<Thirdpage />} />
 
             {/* <Route path="/courses" element={<Courses />} /> */}
 
