@@ -19,7 +19,7 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center border-0 border-red-500">
+    <div className="min-h-screen flex justify-center items-center my-10 border-0 border-red-500">
       <div className="w-full max-w-md p-4">
         <div className="bg-white rounded-lg p-6 shadow-xl border-0 border-red-500">
           <h2  className="text-xl font-bold text-purple-700 uppercase">Sign Up Your User Account</h2>

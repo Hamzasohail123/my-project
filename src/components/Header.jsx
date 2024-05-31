@@ -66,7 +66,9 @@ function Navbar() {
               </div>
             </div>
             {/* Categories */}
+
             <div className="hidden xl:flex min-[1111px]:block ml-5 border-0 border-red-500">
+
               <div className="flex space-x-4">
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
                 {/* <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Category 2</a> */}

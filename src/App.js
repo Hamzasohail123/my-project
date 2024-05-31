@@ -8,8 +8,13 @@ import Login from './components/Login'; // Assuming you have a Login component
 import { Hero } from './pages/Hero';
 // import Courses from './components/Courses';
 import Form from './components/Form';
+
 import {BecomeATutor} from './pages/BecomeATutor';
 import { Thirdpage } from './pages/Thirdpage';
+
+import Footer from './components/Footer';
+
+
 export default function App() {
   return (
     <Router>
@@ -29,6 +34,7 @@ export default function App() {
             {/* <Route path="/courses" element={<Courses />} /> */}
 
           </Routes>
+          {/* <Footer/> */}
         </div>
       </div>
     </Router>

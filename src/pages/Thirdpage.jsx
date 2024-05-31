@@ -1,6 +1,6 @@
 import Header from '../components/Header'
 import MultiStepForm from '../components/MultiStepForm';
-
+import Footer from '../components/Footer';
 
 export const Thirdpage = () => {
     return (
@@ -171,6 +171,10 @@ export const Thirdpage = () => {
 
             {/* section 5*/}
             <MultiStepForm/>
+            
+            <Footer/>
+
+
         </>
     );
 

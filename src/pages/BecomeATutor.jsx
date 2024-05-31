@@ -1,6 +1,9 @@
 import { Form } from 'react-router-dom';
 import Header from '../components/Header'
 import {TestimonialList} from '../components/TestimonialList'
+import Footer from '../components/Footer';
+
+
 export const BecomeATutor = () => {
 
     const topBg = {
@@ -101,6 +104,9 @@ export const BecomeATutor = () => {
 
             {/* form */}
             {/* <Form /> */}
+
+            <Footer />
+
         </>
     );
 };

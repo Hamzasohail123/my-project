@@ -1,20 +1,25 @@
+
 import Courses from "../components/Courses";
 import Input from "../components/SearchInput";
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+
 export const Hero = () => {
-
   const bgColor = {
-    background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(0,212,255,0.1292892156862745) 41%)'
-    
-
+    background:
+      "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(0,212,255,0.1292892156862745) 41%)",
   };
   return (
     <div>
+
       <Header/>
 
       <div className="h-full lg:h-[500px] mt-0 border-0 border-red-500" style={bgColor}>
+
+      
         <div className="relative h-full  lg:h-[500px] mt-0  flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
-          <div className="  inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+          <div className="inset-y-0 top-0 lg:mt-28 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
             {/* <svg
               className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block bg-cyan-100"
               viewBox="0 0 100 100"
@@ -23,6 +28,7 @@ export const Hero = () => {
             >
               <path d="M50 0H100L50 100H0L50 0Z" />
             </svg> */}
+
             <div className="flex justify-center mt-10  border-0 border-red-500">
 
             
@@ -42,6 +48,7 @@ export const Hero = () => {
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
               alt=""
             />
+
             </div>
           </div>
           <div className="border-0 border-red-500 relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
@@ -61,7 +68,6 @@ export const Hero = () => {
         </div>
       </div>
 
-
       <section className="bg-blue-600 my-4 mx-8 lg:h-[440px] h-full rounded-lg">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 flex justify-center items-center">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
@@ -73,7 +79,7 @@ export const Hero = () => {
               />
             </div>
 
-            <div className="lg:py-24">
+            <div className="lg:py-24 lg:-mt-16">
               <h2 className="text-3xl text-white font-bold sm:text-4xl">
                 Discover world of SAP expertise
               </h2>
@@ -119,7 +125,8 @@ export const Hero = () => {
                 <img className="h-auto w-auto m-auto border-0 border-red-500" src="https://www.edx.org/cdn-cgi/image/width=undefined,…ned,format=webp,quality=75/images/koosh-brain.png" alt="" />
               </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
-

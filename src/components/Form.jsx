@@ -1,6 +1,7 @@
 import React from "react";
 import TextEditor from "./TextEditor";
 import Header from "./Header";
+import Footer from '../components/Footer';
 
 function Form() {
 
@@ -249,6 +250,8 @@ function Form() {
         </button>
       </div>
     </div>
+
+    <Footer />
     </>
   );
 }
