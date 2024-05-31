@@ -8,7 +8,7 @@ import Login from './components/Login'; // Assuming you have a Login component
 import { Hero } from './components/Hero';
 // import Courses from './components/Courses';
 import Form from './components/Form';
-import Navbar from './components/Navbar';
+import Navbar from './components/Footer';
 
 export default function App() {
   return (

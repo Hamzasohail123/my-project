@@ -66,7 +66,7 @@ function Navbar() {
               </div>
             </div>
             {/* Categories */}
-            <div className="hidden min-[1111px]:block ml-5 border-0 border-red-500">
+            <div className="hidden lg:flex min-[983px]:block ml-4 border-0 border-red-500">
               <div className="flex space-x-4">
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
                 {/* <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Category 2</a> */}
@@ -95,7 +95,7 @@ function Navbar() {
             }
             
             {/* Categories */}
-            <div className="hidden min-[983px]:block ml-4 border-0 border-red-500">
+            <div className="hidden lg:flex min-[983px]:block ml-4 border-0 border-red-500">
               <div className="flex space-x-4">
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Udemy Business</a>
                 <a href="/" className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Instructor</a>
