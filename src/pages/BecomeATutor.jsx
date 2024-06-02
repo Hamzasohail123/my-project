@@ -2,22 +2,24 @@ import { Form } from 'react-router-dom';
 import Header from '../components/Header'
 import {TestimonialList} from '../components/TestimonialList'
 import Footer from '../components/Footer';
+import './BecomeATutor.css';
+
 
 
 export const BecomeATutor = () => {
 
-    const topBg = {
-        backgroundImage: "url('https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg')",
-        backgroundSize: 'cover',
-        // backgroundPosition: 'center',
-    };
+    // const topBg = {
+    //     backgroundImage: "url('https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg')",
+    //     backgroundSize: 'cover',
+    //     // backgroundPosition: 'center',
+    // };
 
     return (
         <>
             <Header />
             
             {/* top section */}
-            <div className='flex items-center ps-4 md:ps-20 h-[80vh] bg-no-repeat bg-center sm:bg-center  border-0 border-red-500' style={topBg}>
+            <div className='flex items-center ps-4 md:ps-20 h-[80vh] bg-no-repeat bg-cover bg-center bg-image-sm bg-image-lg  ' >
                 <div className='border-0 border-red-500'>
                     <p className='text-[1.5rem] md:text-[3rem] font-bold leading-tight mb-2'>Come teach <br /> with us </p>
                     <p className='text-[1rem] md:text-[1.2rem] mb-4'>Become an instructor and change <br /> lives — including your own</p>

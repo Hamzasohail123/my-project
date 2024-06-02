@@ -25,7 +25,7 @@ export const Thirdpage = () => {
                     <p className='text-[.8rem] md:text-[1rem] '>The edX course library is made of 3,500+ courses and certificates, and offers learners the opportunity to build 30,000 of the most job-critical skills.</p>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    <div className='rounded border-0 border-red-500'>
+                    <div className='rounded hover:-translate-y-2 duration-300 cursor-pointer border-0 border-red-500'>
                         <div className=''>
                             <img className='w-full h-auto' src="https://business.edx.org/wp-content/uploads/2023/09/EdX_Portfolio-Cards_Technology_368-1.jpg" alt="" />
                         </div>
@@ -37,7 +37,7 @@ export const Thirdpage = () => {
                             <p className='mb-2'>Software development</p>
                         </div>
                     </div>
-                    <div className='rounded border-0 border-red-500'>
+                    <div className='rounded hover:-translate-y-2 duration-300 cursor-pointer border-0 border-red-500'>
                         <div className=''>
                             <img className='w-full h-auto' src="https://business.edx.org/wp-content/uploads/2023/09/EdX_Portfolio-Cards_Phase-2_Data_368_@3x.jpg" alt="" />
                         </div>
@@ -49,7 +49,7 @@ export const Thirdpage = () => {
                             <p className='mb-2'>Software development</p>
                         </div>
                     </div>
-                    <div className='rounded border-0 border-red-500'>
+                    <div className='rounded hover:-translate-y-2 duration-300 cursor-pointer border-0 border-red-500'>
                         <div className=''>
                             <img className='w-full h-auto' src="https://business.edx.org/wp-content/uploads/2023/09/EdX_Portfolio-Cards_Phase-2_Finance_368_@3x.jpg?resize=768,288" alt="" />
                         </div>
@@ -61,7 +61,7 @@ export const Thirdpage = () => {
                             <p className='mb-2'>Software development</p>
                         </div>
                     </div>
-                    <div className='rounded border-0 border-red-500'>
+                    <div className='rounded hover:-translate-y-2 duration-300 cursor-pointer border-0 border-red-500'>
                         <div className=''>
                             <img className='w-full h-auto' src="https://business.edx.org/wp-content/uploads/2023/09/EdX_Portfolio-Cards_Communication_368-1.jpg" alt="" />
                         </div>
@@ -73,7 +73,7 @@ export const Thirdpage = () => {
                             <p className='mb-2'>Software development</p>
                         </div>
                     </div>
-                    <div className='rounded border-0 border-red-500'>
+                    <div className='rounded hover:-translate-y-2 duration-300 cursor-pointer border-0 border-red-500'>
                         <div className=''>
                             <img className='w-full h-auto' src="https://business.edx.org/wp-content/uploads/2023/09/EdX_Portfolio-Cards_AI_368-1.jpg" alt="" />
                         </div>
@@ -85,7 +85,7 @@ export const Thirdpage = () => {
                             <p className='mb-2'>Software development</p>
                         </div>
                     </div>
-                    <div className='rounded border-0 border-red-500'>
+                    <div className='rounded hover:-translate-y-2 duration-300 cursor-pointer border-0 border-red-500'>
                         <div className=''>
                             <img className='w-full h-auto' src="https://business.edx.org/wp-content/uploads/2023/09/EdX_Portfolio-Cards_Phase-2_Management_368_@3x.jpg" alt="" />
                         </div>

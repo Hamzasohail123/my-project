@@ -1,0 +1,14 @@
+@media (max-width: 1300px) {
+    .bg-image-sm {
+      background-image: url('../assets/images/girlImgTab.jpg'); /* Change to the desired image URL for small screens */
+    }
+  }
+  
+  @media (min-width: 1301px) {
+    .bg-image-lg {
+      background-image: url('../assets/images/girlImgDesktop.jpg'); /* Change to the desired image URL for large screens */
+    }
+  }
+  /* .bd{
+    border: 2px solid red;
+  } */

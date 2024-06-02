@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
 
   const [isOpen, setIsOpen] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/login');
+  };
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -28,6 +35,8 @@ function Navbar() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  
 
   const iconStyle = {
     fill: 'none',
@@ -140,7 +149,7 @@ function Navbar() {
                     />
                   </svg>
                 </div>
-                <div className="text-gray-300 px-3 py-2 rounded-md">
+                <div className="text-gray-300 px-3 py-2 rounded-md cursor-pointer" onClick={handleClick}>
                   <svg
                     className='h-5 w-5'
                     viewBox="0 0 16 16"

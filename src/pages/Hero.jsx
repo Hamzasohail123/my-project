@@ -3,6 +3,7 @@ import Courses from "../components/Courses";
 import Input from "../components/SearchInput";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Chatbot from '../components/Chatbot';
 
 
 export const Hero = () => {
@@ -13,41 +14,33 @@ export const Hero = () => {
   return (
     <div>
 
-      <Header/>
+      <Header />
 
       <div className="h-full lg:h-[500px] mt-0 border-0 border-red-500" style={bgColor}>
 
-      
+
         <div className="relative h-full  lg:h-[500px] mt-0  flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
-          <div className="inset-y-0 top-0 lg:mt-28 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
-            {/* <svg
-              className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block bg-cyan-100"
-              viewBox="0 0 100 100"
-              fill="currentColor"
-              preserveAspectRatio="none slice"
-            >
-              <path d="M50 0H100L50 100H0L50 0Z" />
-            </svg> */}
+          <div className="inset-y-0 top-0 mt-10  right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
 
-            <div className="flex justify-center mt-10  border-0 border-red-500">
+            <div className="flex justify-center h-[25rem]   border-0 border-red-500">
 
-            
-            <img
-              style={{
-                clipPath: 'polygon(0 0, 100% 0, 53% 100%, 0% 100%)',
-                objectCover: 'cover',
-                width: '80%',
-                height: '36',
-                borderRadius: '8px',
-                boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
-                height: '56',
-                mdHeight: '96',
-                lgHeight: 'full',
-              }}
-              className="mr-0 border-0 border-red-500"
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-            />
+
+              <img
+                style={{
+                  clipPath: 'polygon(0 0, 100% 0, 53% 100%, 0% 100%)',
+                  objectCover: 'cover',
+                  width: '80%',
+                  height: '36',
+                  borderRadius: '8px',
+                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
+                  height: '56',
+                  mdHeight: '96',
+                  lgHeight: 'full',
+                }}
+                className="mr-0 border-0 border-red-500"
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt=""
+              />
 
             </div>
           </div>
@@ -103,28 +96,31 @@ export const Hero = () => {
       </section>
 
       <Courses />
-      
+
       {/* Learn and Grow Section*/}
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 px-7 md:px-12 py-8 md:py-16 border-0 border-red-500">
-              
-              <div className="border-0 border-red-500">
-                <p className="text-[1.5rem] md:text-[3rem] font-bold mb-4" >Learn and Grow</p>
-                <p className="text-[1rem] mb-3">Your edX learning experience is grounded in cutting edge cognitive science. With more than two dozen distinct learning features to help you achieve your goals, our approach follows three key principles:</p>
-                
-                <p className="text-[1.3rem] font-bold mb-2">Experience</p>
-                <p className="text-[1rem] mb-3">Learn new knowledge and skills in a variety of ways, from engaging video lectures and dynamic graphics to data visualizations and interactive elements.</p>
-                
-                <p className="text-[1.3rem] font-bold mb-2">Practice</p>
-                <p className="text-[1rem] mb-3">Demonstrating your knowledge is a critical part of learning. edX courses and programs provide a space to practice with quizzes, open response assessments, virtual environments, and more.</p>
-                
-                <p className="text-[1.3rem] font-bold mb-2">Apply</p>
-                <p className="text-[1rem] mb-3">Learning on edX transforms how you think and what you can do, and translates directly into the real world—immediately apply your new capabilities in the context of your job.</p>
-              
-              </div>
-              <div className="border-0 flex justify-center items-center border-red-500">
-                <img className="h-auto w-auto m-auto border-0 border-red-500" src="https://www.edx.org/cdn-cgi/image/width=undefined,…ned,format=webp,quality=75/images/koosh-brain.png" alt="" />
-              </div>
+
+        <div className="border-0 border-red-500">
+          <p className="text-[1.5rem] md:text-[3rem] font-bold mb-4" >Learn and Grow</p>
+          <p className="text-[1rem] mb-3">Your edX learning experience is grounded in cutting edge cognitive science. With more than two dozen distinct learning features to help you achieve your goals, our approach follows three key principles:</p>
+
+          <p className="text-[1.3rem] font-bold mb-2">Experience</p>
+          <p className="text-[1rem] mb-3">Learn new knowledge and skills in a variety of ways, from engaging video lectures and dynamic graphics to data visualizations and interactive elements.</p>
+
+          <p className="text-[1.3rem] font-bold mb-2">Practice</p>
+          <p className="text-[1rem] mb-3">Demonstrating your knowledge is a critical part of learning. edX courses and programs provide a space to practice with quizzes, open response assessments, virtual environments, and more.</p>
+
+          <p className="text-[1.3rem] font-bold mb-2">Apply</p>
+          <p className="text-[1rem] mb-3">Learning on edX transforms how you think and what you can do, and translates directly into the real world—immediately apply your new capabilities in the context of your job.</p>
+
+        </div>
+        <div className="border-0 flex justify-center items-center border-red-500">
+          <img className="h-auto w-auto m-auto border-0 border-red-500" src="https://www.edx.org/cdn-cgi/image/width=undefined,…ned,format=webp,quality=75/images/koosh-brain.png" alt="" />
+        </div>
       </div>
+      
+      <Chatbot />
+
 
       <Footer />
     </div>
